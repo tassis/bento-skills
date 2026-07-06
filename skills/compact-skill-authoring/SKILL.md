@@ -1,26 +1,26 @@
 ---
 name: compact-skill-authoring
-description: Create compact, high-leverage OpenCode skills by first interviewing the user for missing context, trigger boundaries, failure modes, and intended leverage, then writing a tightly scoped SKILL.md. Use when the goal is to author or refine a small, reusable skill that improves knowledge, judgment, or task capability without turning into a workflow engine, global persona, or overly broad handbook.
+description: Create compact, high-leverage skills by first interviewing the user for missing context, trigger boundaries, failure modes, and intended leverage, then writing a tightly scoped skill document. Use when the goal is to author or refine a small, reusable skill that improves knowledge, judgment, or task capability without turning into a workflow engine, global persona, or overly broad handbook.
 ---
 
 # Compact Skill Authoring
 
 Create compact, high-leverage skills.
 
-This skill is for authoring **small, reusable, sharply bounded** OpenCode skills that improve agent behavior without becoming a bloated framework.
+This skill is for authoring **small, reusable, sharply bounded** skills that improve agent behavior without becoming a bloated framework.
 
 The expected pattern is:
 
 1. gather missing context from the user;
 2. sharpen the skill boundary;
 3. compress the idea into its highest-leverage form;
-4. write a concise `SKILL.md`.
+4. write a concise skill document.
 
 ## Use this skill when
 
 Use this skill when the user wants help with any of the following:
 
-- creating a new OpenCode skill;
+- creating a new skill;
 - turning a rough behavioral idea into a reusable skill;
 - designing a narrowly scoped judgment, capability, or writing skill;
 - tightening an existing skill that feels too broad, too long, or too workflow-heavy;
@@ -53,6 +53,8 @@ Start by understanding what problem the skill should solve, where it should trig
 
 The compactness is not just about fewer lines. It is about keeping only the instructions that materially improve behavior.
 
+Also decide early whether the idea should become a reusable skill at all. Some ideas belong in project policy, agent configuration, workflow tooling, or one-off prompts instead.
+
 ## Required intake behavior
 
 Before drafting, gather enough context to answer these questions:
@@ -79,28 +81,15 @@ Ask targeted follow-up questions when the answers are still fuzzy.
 
 ## Compression mindset
 
-Once the context is clear, compress the idea before writing.
+Once the context is clear, reduce the design to its smallest useful form.
 
-Reduce the design to its smallest useful form.
+Prefer a sharp trigger boundary, 3-6 strong principles, explicit anti-patterns, and one clear type of leverage.
 
-Prefer:
-
-- a sharp trigger boundary over a broad one;
-- 3-6 strong principles over 20 weak instructions;
-- explicit anti-patterns over vague “best practices”;
-- one clear type of leverage over several loosely related purposes.
-
-Remove or challenge:
-
-- workflow ownership that should live elsewhere;
-- instructions that act like a global persona;
-- future-proofing that the user did not ask for;
-- long examples that do not materially change behavior;
-- “do everything” ambitions.
+Challenge anything that behaves like workflow ownership, global persona, speculative future-proofing, or a “do everything” skill.
 
 ## Authoring rules
 
-When writing the `SKILL.md`:
+When writing the skill document:
 
 - keep it self-contained;
 - define what the skill is for;
@@ -112,6 +101,12 @@ When writing the `SKILL.md`:
 - keep the writing dense, concrete, and behavior-shaping.
 
 Prefer instructions that improve behavior at many future uses, not just one current example.
+
+Treat the frontmatter description as a trigger contract, not just a summary. It should describe both what the skill does and the situations where it should load.
+
+Do not assume the output must live in any one fixed installation path or repository layout.
+
+If the user already has a repository structure or target directory convention, follow that. Otherwise stay path-neutral and focus on the skill content first.
 
 ## Section structure guidance
 
@@ -145,35 +140,11 @@ The goal is to keep every skill:
 - readable;
 - not heavier than necessary.
 
-## Preferred skill style
+## Preferred targets and common failures
 
-This skill is optimized for creating skills that are:
+This skill is optimized for compact, reusable, failure-mode-driven skills such as judgment skills, implementation-posture skills, review heuristic skills, focused writing skills, and bounded task-capability skills.
 
-- compact;
-- reusable;
-- high-leverage;
-- failure-mode-driven;
-- easy to install independently;
-- resistant to trigger sprawl.
-
-Especially good targets include:
-
-- judgment skills;
-- implementation-posture skills;
-- review heuristic skills;
-- focused writing skills;
-- bounded task-capability skills.
-
-## Failure modes to avoid while authoring
-
-Avoid producing skills that are:
-
-- too broad to trigger safely;
-- mostly a manifesto with no operational boundary;
-- secretly workflow engines;
-- giant generic handbooks;
-- missing a `Do not use` section in practice even if not titled exactly that;
-- trying to solve several unrelated problems at once.
+Avoid producing skills that are too broad to trigger safely, mostly manifesto with no operational boundary, secretly workflow engines, giant generic handbooks, or trying to solve several unrelated problems at once.
 
 ## Suggested authoring flow
 
@@ -185,7 +156,15 @@ Use this sequence:
 4. identify 3-6 core failure modes or behavior improvements;
 5. compress the scope;
 6. draft the skill;
-7. review the draft for breadth, overlap, and unnecessary weight.
+7. do one final compression-and-clarity pass.
+
+That final pass should:
+
+- remove repetition;
+- sharpen trigger language;
+- improve readability;
+- preserve the intended boundary and leverage;
+- stop short of turning the task into pure editorial cleanup when real scope correction is still needed.
 
 ## Good result characteristics
 

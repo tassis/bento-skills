@@ -1,6 +1,6 @@
 ---
 name: technical-document-writing
-description: Write or refine engineering-facing technical documentation that explains how a feature works internally. Use when the user needs a technical document covering relationship to feature scope, flow overview, involved components, data and state flow, error handling, dependencies, constraints, or known risks based on plans, code, or existing implementation. Do not use for TD/PM/QA-facing feature specs, high-level product scoping, release notes, or pure architecture brainstorming.
+description: Write or backfill an engineering-facing technical document that explains how a feature works internally. Use when the user needs system flow, involved components, data and state movement, error handling, dependencies, constraints, or known risks documented for engineers and maintainers. Prefer this over feature-spec-writing when the main audience is engineering and the main job is explaining implementation behavior rather than defining product-facing scope. Do not use for PM/QA-facing feature specs or for polishing an already-correct draft.
 ---
 
 # Technical Document Writing

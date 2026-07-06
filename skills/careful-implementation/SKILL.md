@@ -1,6 +1,6 @@
 ---
 name: careful-implementation
-description: Use during feature implementation, bug fixing, refactoring, and other non-trivial code changes in an existing codebase. Helps the agent avoid silent assumptions, overengineering, unrelated edits, and unverifiable completion claims. Especially useful when modifying existing code where diffs should stay minimal, focused, and well-verified. Do not use for feature-spec writing, technical-document writing, document polishing, brainstorming, or architecture-only discussion.
+description: Use during non-trivial existing-code implementation, bug fixing, and behavior-preserving refactoring when the main risk is silent assumptions, overengineering, oversized diffs, or weak verification. Especially useful for focused code changes in established codebases where edits should stay minimal, local, and well-verified. Do not use for trivial edits, greenfield prototyping, architecture selection, feature-spec writing, technical-document writing, document polishing, or purely exploratory debugging.
 ---
 
 # Careful Implementation
@@ -19,6 +19,32 @@ This skill is primarily for:
 - existing-codebase work where changes should stay narrow and reviewable.
 
 It is not a full workflow manager and not a general writing style guide. Its job is to improve implementation judgment during code-editing work.
+
+## Expected inputs
+
+This skill is most useful when the task already has a concrete implementation target.
+
+Typical inputs include:
+
+- an existing codebase area to modify;
+- a bug to fix with a reasonably understood target behavior;
+- a bounded feature implementation request;
+- a refactor with stable intended behavior;
+- a request to keep the diff narrow, local, or low-risk.
+
+It is less useful when the main problem is still figuring out what to build or where the real failure cause lives.
+
+## Expected outputs
+
+The expected output is not a document. It is a better implementation outcome.
+
+A good output usually includes:
+
+- a focused code change;
+- explicit handling of important assumptions;
+- minimal scope expansion;
+- meaningful verification, or explicit limits on verification;
+- a result that is easier to review because the diff stays tied to the task.
 
 ## Use this skill when
 
@@ -47,10 +73,13 @@ Do not use this skill when the main need is:
 - writing a feature spec;
 - writing a technical document;
 - polishing or rewriting an existing document draft;
+- trivial edits or obvious one-line changes where extra discipline would only add noise;
+- greenfield prototyping where speed of exploration matters more than narrow existing-code modification;
 - brainstorming product or architecture directions before implementation starts;
 - broad open-ended research without code changes;
 - high-level design discussion where the main problem is choosing the approach, not executing it carefully;
-- workflow orchestration, task sequencing, or execution-state management.
+- workflow orchestration, task sequencing, or execution-state management;
+- purely exploratory debugging where the root cause is still unclear and implementation should wait.
 
 In those cases, a more specialized writing, design, research, or planning skill should own the work.
 

@@ -1,6 +1,6 @@
 ---
 name: document-polishing
-description: Refine an existing document draft for clarity, structure, consistency, and readability without changing its underlying intent or inventing missing decisions. Use when the user already has a feature spec, technical document, rough draft, or substantial prose that needs tightening, reorganizing, deduplicating, or polishing for review or submission. Do not use for writing a document mostly from scratch, deciding missing scope, reconstructing feature or technical content from code, or silently filling unresolved gaps.
+description: Refine an existing document draft for clarity, structure, consistency, and readability without changing its underlying intent or inventing missing decisions. Use when the user already has substantial draft content and wants it tightened, reorganized, deduplicated, or made more review-ready. Prefer this over feature-spec-writing or technical-document-writing only when the main problem is expression quality, not missing content, scope decisions, or technical explanation.
 ---
 
 # Document Polishing

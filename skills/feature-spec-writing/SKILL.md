@@ -1,6 +1,6 @@
 ---
 name: feature-spec-writing
-description: Write or refine feature-facing documentation for TD, PM, and QA alignment. Use when the user needs a feature spec that defines goals, non-goals, usage context, expected behavior, failure scenarios, known issues, or open questions for a feature being built, clarified, or backfilled from existing work. Do not use for internal technical flow documentation, architecture-only design, generic release notes, or pure editorial cleanup.
+description: Write or backfill a feature-facing specification for TD, PM, and QA alignment. Use when the user needs a document that defines feature goals, non-goals, usage context, expected behavior, error scenarios, known issues, or open questions. Prefer this over technical-document-writing when the main audience is PM/QA/TD and the main job is defining feature boundaries and externally visible behavior. Do not use for internal technical-flow documentation or for polishing an already-correct draft.
 ---
 
 # Feature Spec Writing
